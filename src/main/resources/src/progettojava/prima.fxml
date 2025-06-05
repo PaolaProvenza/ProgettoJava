@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.progettojava.HelloController">
+   <children>
+      <Pane fx:id="sconfitta" prefHeight="540.0" prefWidth="818.0">
+         <children>
+            <ImageView fitHeight="540.0" fitWidth="960.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo1.png" />
+               </image>
+            </ImageView>
+            <Label id="titolo" layoutX="268.0" layoutY="47.0" text="HAI PERSO!" textAlignment="CENTER" textFill="#ff0909" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="53.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="108.0" prefHeight="51.0" prefWidth="286.0" text="La parola era">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="parola1" alignment="CENTER" contentDisplay="CENTER" layoutX="265.0" layoutY="151.0" prefHeight="51.0" prefWidth="286.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="32.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="138.0" fitWidth="89.0" layoutX="205.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sediatriste.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="224.0" fitWidth="250.0" layoutX="465.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@coppavia.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="165.0" fitWidth="121.0" layoutX="-26.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" rotate="51.9">
+               <image>
+                  <Image url="@potevandaremeglio.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="134.0" layoutY="428.0" mnemonicParsing="false" onAction="#nuova_partita" prefHeight="51.0" prefWidth="230.0" style="-fx-background-color: #00a108;" text="NUOVA PARTITA">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="26.85" offsetX="-5.0" radius="12.6325" spread="0.06" width="25.68">
+                     <color>
+                        <Color red="0.0998050719499588" green="0.28548407554626465" blue="0.3368421196937561" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button layoutX="475.0" layoutY="428.0" mnemonicParsing="false" onAction="#exit" prefHeight="51.0" prefWidth="230.0" style="-fx-background-color: RED;" text="ESCI">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="26.85" offsetX="-5.0" radius="12.6325" spread="0.06" width="25.68">
+                     <color>
+                        <Color red="0.0998050719499588" green="0.28548407554626465" blue="0.3368421196937561" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="vittoria" prefHeight="540.0" prefWidth="818.0">
+         <children>
+            <ImageView fitHeight="540.0" fitWidth="960.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo1.png" />
+               </image>
+            </ImageView>
+            <Label id="titolo" layoutX="270.0" layoutY="47.0" text="HAI VINTO!" textAlignment="CENTER" textFill="#00a108" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="53.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="108.0" prefHeight="51.0" prefWidth="286.0" text="La parola era">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="parola" alignment="CENTER" contentDisplay="CENTER" layoutX="265.0" layoutY="151.0" prefHeight="51.0" prefWidth="286.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="32.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="239.0" fitWidth="311.0" layoutX="266.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@vittoria.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="134.0" layoutY="428.0" mnemonicParsing="false" onAction="#nuova_partita" prefHeight="51.0" prefWidth="230.0" style="-fx-background-color: #00a108;" text="NUOVA PARTITA">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="26.85" offsetX="-5.0" radius="12.6325" spread="0.06" width="25.68">
+                     <color>
+                        <Color red="0.0998050719499588" green="0.28548407554626465" blue="0.3368421196937561" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button layoutX="475.0" layoutY="428.0" mnemonicParsing="false" onAction="#exit" prefHeight="51.0" prefWidth="230.0" style="-fx-background-color: RED;" text="ESCI">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="26.85" offsetX="-5.0" radius="12.6325" spread="0.06" width="25.68">
+                     <color>
+                        <Color red="0.0998050719499588" green="0.28548407554626465" blue="0.3368421196937561" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </children>
+      </Pane>
+      <Pane id="single_player" fx:id="single_player" prefHeight="540.0" prefWidth="818.0">
+         <children>
+            <ImageView fitHeight="540.0" fitWidth="960.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo1.png" />
+               </image>
+            </ImageView>
+            <ImageView id="base" fx:id="base" fitHeight="5.0" fitWidth="137.0" layoutX="128.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@base.png" />
+               </image></ImageView>
+            <ImageView id="asta" fx:id="asta" fitHeight="215.0" fitWidth="6.0" layoutX="211.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@asta.png" />
+               </image>
+            </ImageView>
+            <ImageView id="parte_alta" fx:id="parte_alta" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@parte_alta.png" />
+               </image>
+            </ImageView>
+            <ImageView id="corda" fx:id="corda" fitHeight="51.0" fitWidth="3.0" layoutX="99.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@corda.png" />
+               </image>
+            </ImageView>
+            <ImageView id="testa" fx:id="testa" fitHeight="61.0" fitWidth="49.0" layoutX="76.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@testa.png" />
+               </image>
+            </ImageView>
+            <ImageView id="busto" fx:id="busto" fitHeight="68.0" fitWidth="5.0" layoutX="100.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@corpo.png" />
+               </image>
+            </ImageView>
+            <ImageView id="braccia" fx:id="braccia" fitHeight="26.0" fitWidth="49.0" layoutX="77.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@braccia.png" />
+               </image>
+            </ImageView>
+            <ImageView id="gambe" fx:id="gambe" fitHeight="41.0" fitWidth="49.0" layoutX="77.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gambe.png" />
+               </image>
+            </ImageView>
+            <Label id="titolo" layoutX="128.0" layoutY="77.0" text="INDOVINA LA PAROLA" textAlignment="CENTER" textFill="#2f66ae" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="53.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label fx:id="trattino1" alignment="CENTER" contentDisplay="CENTER" layoutX="360.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="trattino2" alignment="CENTER" contentDisplay="CENTER" layoutX="385.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="trattino3" alignment="CENTER" contentDisplay="CENTER" layoutX="410.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="trattino4" alignment="CENTER" contentDisplay="CENTER" layoutX="435.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="trattino5" alignment="CENTER" contentDisplay="CENTER" layoutX="460.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="trattino6" alignment="CENTER" contentDisplay="CENTER" layoutX="485.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="trattino7" alignment="CENTER" contentDisplay="CENTER" layoutX="510.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="trattino8" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="trattino9" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="trattino10" alignment="CENTER" contentDisplay="CENTER" layoutX="585.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="trattino11" alignment="CENTER" contentDisplay="CENTER" layoutX="610.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="289.0" fitWidth="99.0" layoutX="697.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@tivedo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="trattino12" alignment="CENTER" contentDisplay="CENTER" layoutX="635.0" layoutY="256.0" prefHeight="51.0" prefWidth="49.0" text="-">
+               <font>
+                  <Font name="Berlin Sans FB" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="lettera_presente" layoutX="467.0" layoutY="340.0" text="LETTERA GIA' INSERITA">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="lettera_giusta" fitHeight="197.0" fitWidth="137.0" layoutX="325.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@si.png" />
+               </image></ImageView>
+            <ImageView fx:id="lettera_sbagliata" fitHeight="197.0" fitWidth="137.0" layoutX="325.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@none.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="inserisci_parola" prefHeight="540.0" prefWidth="818.0">
+         <children>
+            <ImageView fitHeight="540.0" fitWidth="960.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo1.png" />
+               </image>
+            </ImageView>
+            <Label id="titolo" layoutX="144.0" layoutY="77.0" text="INSERISCI LA PAROLA" textAlignment="CENTER" textFill="#2f66ae" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="53.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <TextField fx:id="field" alignment="CENTER" layoutX="256.0" layoutY="237.0" prefHeight="61.0" prefWidth="305.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="138.0" fitWidth="230.0" layoutX="294.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@fuma.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="294.0" layoutY="399.0" mnemonicParsing="false" onAction="#due_giocatori" prefHeight="51.0" prefWidth="230.0" style="-fx-background-color: #2f66ae;" text="INVIA E GIOCA">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="26.85" offsetX="-5.0" radius="12.6325" spread="0.06" width="25.68">
+                     <color>
+                        <Color red="0.0998050719499588" green="0.28548407554626465" blue="0.3368421196937561" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="regole_multi" prefHeight="540.0" prefWidth="818.0">
+         <children>
+            <ImageView fitHeight="540.0" fitWidth="818.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo1.png" />
+               </image>
+            </ImageView>
+            <Label id="titolo" layoutX="125.0" layoutY="52.0" text="REGOLE MULTIPLAYER" textAlignment="CENTER" textFill="#2f66ae" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="53.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="52.0" layoutY="172.0" prefHeight="43.0" prefWidth="714.0" text="- Il GIOCATORE 2 PROPONE UNA LETTERA" textAlignment="CENTER" textFill="#52575e" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="116.0" layoutY="208.0" prefHeight="43.0" prefWidth="491.0" text="- Se è presente, comparirà sullo schermo" textAlignment="CENTER" textFill="#1b8e28" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="116.0" layoutY="248.0" prefHeight="43.0" prefWidth="626.0" text="- Se non è presente, avrai commesso un errore, e verrà aggiornato l'impiccato" textAlignment="CENTER" textFill="#b40b0b" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="52.0" layoutY="302.0" prefHeight="43.0" prefWidth="714.0" text="- IL GIOCO TERMINA QUANDO" textAlignment="CENTER" textFill="#52575e" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="116.0" layoutY="336.0" prefHeight="43.0" prefWidth="491.0" text="- Il giocatore indovina la parola" textAlignment="CENTER" textFill="#1b8e28" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="116.0" layoutY="379.0" prefHeight="43.0" prefWidth="626.0" text="- Il disegno dell'impiccato viene completato" textAlignment="CENTER" textFill="#b40b0b" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Button layoutX="324.0" layoutY="434.0" mnemonicParsing="false" onAction="#inizializza_multigiocatore" prefHeight="51.0" prefWidth="170.0" style="-fx-background-color: #2f66ae;" text="AVVIA">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="26.85" offsetX="-5.0" radius="12.6325" spread="0.06" width="25.68">
+                     <color>
+                        <Color red="0.0998050719499588" green="0.28548407554626465" blue="0.3368421196937561" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <ImageView fitHeight="197.0" fitWidth="184.0" layoutX="569.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@checalini.png" />
+               </image>
+            </ImageView>
+            <Label id="titolo" layoutX="52.0" layoutY="129.0" prefHeight="43.0" prefWidth="714.0" text="- Il GIOCATORE 1 SCEGLIE LA PAROLA" textAlignment="CENTER" textFill="#52575e" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <ImageView fitHeight="41.0" fitWidth="74.0" layoutX="28.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@freccina.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="28.0" layoutY="463.0" mnemonicParsing="false" onAction="#torna_selezionaModalita" opacity="0.0" prefHeight="33.0" prefWidth="71.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="regole_single" prefHeight="540.0" prefWidth="818.0">
+         <children>
+            <ImageView fitHeight="540.0" fitWidth="818.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo1.png" />
+               </image>
+            </ImageView>
+            <Label id="titolo" layoutX="116.0" layoutY="51.0" text="REGOLE SINGLEPLAYER" textAlignment="CENTER" textFill="#2f66ae" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="53.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="49.0" layoutY="136.0" prefHeight="43.0" prefWidth="714.0" text="- Il GIOCATORE PROPONE UNA LETTERA" textAlignment="CENTER" textFill="#52575e" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="116.0" layoutY="179.0" prefHeight="43.0" prefWidth="491.0" text="- Se è presente, comparirà sullo schermo" textAlignment="CENTER" textFill="#1b8e28" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="116.0" layoutY="222.0" prefHeight="43.0" prefWidth="626.0" text="- Se non è presente, avrai commesso un errore, e verrà aggiornato l'impiccato" textAlignment="CENTER" textFill="#b40b0b" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="51.0" layoutY="270.0" prefHeight="43.0" prefWidth="714.0" text="- IL GIOCO TERMINA QUANDO" textAlignment="CENTER" textFill="#52575e" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="116.0" layoutY="313.0" prefHeight="43.0" prefWidth="491.0" text="- Il giocatore indovina la parola" textAlignment="CENTER" textFill="#1b8e28" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label id="titolo" layoutX="116.0" layoutY="356.0" prefHeight="43.0" prefWidth="626.0" text="- Il disegno dell'impiccato viene completato" textAlignment="CENTER" textFill="#b40b0b" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Button layoutX="321.0" layoutY="433.0" mnemonicParsing="false" onAction="#giocatore_singolo" prefHeight="51.0" prefWidth="170.0" style="-fx-background-color: #2f66ae;" text="AVVIA">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="26.85" offsetX="-5.0" radius="12.6325" spread="0.06" width="25.68">
+                     <color>
+                        <Color red="0.0998050719499588" green="0.28548407554626465" blue="0.3368421196937561" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <ImageView fitHeight="197.0" fitWidth="184.0" layoutX="578.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@studiouffa.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="74.0" layoutX="28.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@freccina.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="28.0" layoutY="463.0" mnemonicParsing="false" onAction="#torna_selezionaModalita" opacity="0.0" prefHeight="33.0" prefWidth="71.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane id="seleziona_modalita" fx:id="seleziona_modalita" prefHeight="540.0" prefWidth="818.0">
+         <children>
+            <ImageView fitHeight="540.0" fitWidth="960.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo1.png" />
+               </image>
+            </ImageView>
+            <ImageView accessibleRole="BUTTON" fitHeight="192.0" fitWidth="198.0" layoutX="137.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@stickman.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView accessibleRole="BUTTON" fitHeight="192.0" fitWidth="198.0" layoutX="473.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@stickman_multigiocatore.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button fx:id="sing" layoutX="147.0" layoutY="195.0" mnemonicParsing="false" onAction="#regole_giocatore_singolo" opacity="0.0" prefHeight="190.0" prefWidth="184.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="multi" layoutX="479.0" layoutY="195.0" mnemonicParsing="false" onAction="#regole_multi_giocatore" opacity="0.0" prefHeight="190.0" prefWidth="184.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label layoutX="144.0" layoutY="177.0" text="GIOCATORE SINGOLO">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+               </font></Label>
+            <Label id="titolo" layoutX="139.0" layoutY="77.0" text="SCEGLI LA MODALITA'" textAlignment="CENTER" textFill="#2f66ae" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="53.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Label layoutX="493.0" layoutY="177.0" text="MULTIGIOCATORE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="41.0" fitWidth="74.0" layoutX="28.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@freccina.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="28.0" layoutY="463.0" mnemonicParsing="false" onAction="#torna_principale" opacity="0.0" prefHeight="33.0" prefWidth="71.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane id="primo" fx:id="primo" prefHeight="540.0" prefWidth="818.0">
+         <children>
+            <ImageView fitHeight="540.0" fitWidth="960.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="299.0" fitWidth="393.0" layoutX="156.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo_impiccato.png" />
+               </image>
+            </ImageView>
+            <Label id="titolo" layoutX="247.0" layoutY="67.0" text="L'IMPICCATO" textAlignment="CENTER" textFill="#2f66ae" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="53.0" />
+               </font>
+               <effect>
+                  <Glow level="0.48" />
+               </effect>
+            </Label>
+            <Button layoutX="293.0" layoutY="399.0" mnemonicParsing="false" onAction="#cambia" prefHeight="51.0" prefWidth="230.0" style="-fx-background-color: #2f66ae;" text="INIZIA A GIOCARE">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="26.85" offsetX="-5.0" radius="12.6325" spread="0.06" width="25.68">
+                     <color>
+                        <Color red="0.0998050719499588" green="0.28548407554626465" blue="0.3368421196937561" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>
